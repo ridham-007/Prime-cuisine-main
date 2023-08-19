@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import question from "../img/user.png";
 import { usePaystackPayment } from 'react-paystack';
 import "../styles/checkoutBtn.css";
-import logo from "../img/prime-logo.png";
 
 interface CartItem {
   id: string;
@@ -111,9 +110,7 @@ const Cart = ({ cart, setCart, handleChange, setShow }: CartProps) => {
         ref={containerRef}
       >
         <div className="flex flex-row justify-between  items-center">
-          <div>
-            <img src={logo} alt="logo" className="w-24 h-24 ml-[-12px]" />
-          </div>
+  
           {
             !!storedFirstName &&
             <div className="flex flex-col h-full justify-center items-center">
