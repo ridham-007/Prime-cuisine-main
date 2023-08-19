@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import login from '../img/login.png';
 
 const supabase = createClient(
-  'https://nfblpmvorlfioljrgtud.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5mYmxwbXZvcmxmaW9sanJndHVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI0MzY4MTgsImV4cCI6MjAwODAxMjgxOH0.UwE-qUN7ex7tiNXj556Puy2vbpZGQWt0q-_vuPBw_YU'
+  'https://amlztwycpfhonwfvzhca.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFtbHp0d3ljcGZob253ZnZ6aGNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzQ0ODI1NTksImV4cCI6MTk5MDA1ODU1OX0.NqV1vbExN3jpY11rTWPN4fEvEw-m5xjNmHVh2GwGIsI'
 );
 
 function Login() {
