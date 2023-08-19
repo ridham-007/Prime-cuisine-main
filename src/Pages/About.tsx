@@ -8,7 +8,7 @@ const About = () => {
             <section className="w-full container mx-auto flex flex-col justify-center px-20 ml-32">
                 <div className="mx-aut flex flex-col items-center gap-2 overflow-hidden ">
                     <h1 className="font-bold text-2xl mb-4 text-brandColor">
-                        About Prime Cuisine
+                        About Food court
                     </h1>
                     <p className="">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

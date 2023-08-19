@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import question from "../img/user.png";
 import { usePaystackPayment } from 'react-paystack';
 import "../styles/checkoutBtn.css";
-import logo from "../img/prime-logo.png";
 
 interface CartItem {
   id: string;
@@ -111,9 +110,7 @@ const Cart = ({ cart, setCart, handleChange, setShow }: CartProps) => {
         ref={containerRef}
       >
         <div className="flex flex-row justify-between  items-center">
-          <div>
-            <img src={logo} alt="logo" className="w-24 h-24 ml-[-12px]" />
-          </div>
+  
           {
             !!storedFirstName &&
             <div className="flex flex-col h-full justify-center items-center">
@@ -138,21 +135,21 @@ const Cart = ({ cart, setCart, handleChange, setShow }: CartProps) => {
               <div>{item.amount}</div>
             </div>
             <div>
-              <span className="text-brandColor py-1.5 px-2.5 rounded-lg mr-2.5"> &#x20A6; {item.price}</span>
+              <span className="text-brandColor py-1.5 px-2.5 rounded-lg mr-2.5"> &#x20B9; {item.price}</span>
             </div>
           </div>
         ))}
         <div className="flex justify-between mt-8">
           <span className="text-lg font-semibold">Meal Price :</span>
-          <span className="text-lg font-semibold text-brandColor">  &#x20A6;{price}</span>
+          <span className="text-lg font-semibold text-brandColor">  &#x20B9;{price}</span>
         </div>
         <div className="flex justify-between mt-4 border-b-2">
           <span className="text-lg font-semibold">Delivery Fee :</span>
-          <span className="text-lg font-semibold text-brandColor">  &#x20A6;1000</span>
+          <span className="text-lg font-semibold text-brandColor">  &#x20B9;1000</span>
         </div>
         <div className="flex justify-between mt-4 border-b-2">
           <span className="text-xl font-bold">Total Cost :</span>
-          <span className="text-xl font-bold text-brandColor">  &#x20A6;{price + 1000}</span>
+          <span className="text-xl font-bold text-brandColor">  &#x20B9;{price + 1000}</span>
         </div>
         <div className="flex w-full justify-center items-center mt-32">
           <p className="text-xl font-semibold">Enjoy Your Meal😀</p>
@@ -183,7 +180,7 @@ const Cart = ({ cart, setCart, handleChange, setShow }: CartProps) => {
                   </button>
                 </div>
                 <div>
-                  <span className="text-brandColor py-1.5 px-2.5 rounded-lg mr-2.5"> &#x20A6; {item.price}</span>
+                  <span className="text-brandColor py-1.5 px-2.5 rounded-lg mr-2.5"> &#x20B9; {item.price}</span>
                   <button
                     className="py-2 px-2.5 font-semibold bg-red-100 rounded-lg cursor-pointer text-brandColor hover:text-red-600"
                     onClick={() => handleRemove(item.id)}
@@ -198,21 +195,21 @@ const Cart = ({ cart, setCart, handleChange, setShow }: CartProps) => {
             <>
               <div className="flex justify-between mt-8">
                 <span className="text-lg font-semibold">Meal Price :</span>
-                <span className="text-lg font-semibold text-brandColor">  &#x20A6;{price}</span>
+                <span className="text-lg font-semibold text-brandColor">  &#x20B9;{price}</span>
               </div>
               <div className="flex justify-between mt-4 border-b-2">
                 <span className="text-lg font-semibold">Delivery Fee :</span>
-                <span className="text-lg font-semibold text-brandColor">  &#x20A6;1000</span>
+                <span className="text-lg font-semibold text-brandColor">  &#x20B9;1000</span>
               </div>
               <div className="flex justify-between mt-4 border-b-2">
                 <span className="text-xl font-bold">Total Cost :</span>
-                <span className="text-xl font-bold text-brandColor">  &#x20A6;{price + 1000}</span>
+                <span className="text-xl font-bold text-brandColor">  &#x20B9;{price + 1000}</span>
               </div>
               <section className="flex justify-between mt-12">
                 <ReactToPrint
                   pageStyle={printPageStyle}
                   content={() => containerRef.current}
-                  documentTitle="Prime Cuisine"
+                  documentTitle="Food court"
                 >
                   <PrintContextConsumer>
                     {({ handlePrint }) => (
