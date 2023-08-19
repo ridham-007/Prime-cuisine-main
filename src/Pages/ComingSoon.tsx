@@ -69,7 +69,7 @@ const ComingSoon = () => {
                 </div>
                 <div className="coming-soon-container">
                     <h2>OPENING SOON!!</h2>
-                    <p className="top-p">Grand opening of Prime Cuisine Restaurant. Huge discounts for first 100 reservations.</p>
+                    <p className="top-p">Grand opening of Food court Restaurant. Huge discounts for first 100 reservations.</p>
                     <hr />
                     <p className="bottom-p">Coming soon in: {timerComponents.length ? timerComponents : <span>We're Open! 🔥</span>}</p>
                     <p className="bottom-p">Launching: December {year}</p>
