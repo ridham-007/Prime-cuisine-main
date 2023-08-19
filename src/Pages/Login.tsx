@@ -1,23 +1,12 @@
-import { createClient } from '@supabase/supabase-js';
-import { Auth } from '@supabase/auth-ui-react';
-import { ThemeSupa } from '@supabase/auth-ui-shared';
+
 import { useNavigate } from 'react-router-dom';
 import login from '../img/login.png';
 
-const supabase = createClient(
-  'https://amlztwycpfhonwfvzhca.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFtbHp0d3ljcGZob253ZnZ6aGNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzQ0ODI1NTksImV4cCI6MTk5MDA1ODU1OX0.NqV1vbExN3jpY11rTWPN4fEvEw-m5xjNmHVh2GwGIsI'
-);
+
 
 function Login() {
   const navigate = useNavigate();
-  supabase.auth.onAuthStateChange(async (event) => {
-    if (event === 'SIGNED_IN') {
-      navigate('/home');
-    } else {
-      navigate('/');
-    }
-  });
+
 
   return (
     <>
@@ -33,17 +22,24 @@ function Login() {
                 <h1 className="mb-4 text-2xl font-bold text-center ">
                   Signup/Login to Your Account
                 </h1>
-                <Auth
-                  supabaseClient={supabase}
-                  appearance={{ theme: ThemeSupa }}
-                  theme="light"
-                  providers={["google"]}
-                />
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email:</label>
+                  <input type="email" id="email" name="email" required className="w-full border rounded py-2 px-3 focus:outline-none focus:ring focus:border-blue-300" />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="password" className="block text-gray-700 font-bold mb-2">Password:</label>
+                  <input type="password" id="password" name="password" required className="w-full border rounded py-2 px-3 focus:outline-none focus:ring focus:border-blue-300" />
+                </div>
+                <div>
+                  <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring focus:border-blue-300" onClick={() => navigate('/home')}>
+                    Login
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 }
